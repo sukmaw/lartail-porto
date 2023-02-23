@@ -2,13 +2,11 @@ import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import react from '@vitejs/plugin-react';
 
+let server = undefined
+// const server = require('./customServer')
+
 export default defineConfig({
-    server: {
-        host: '0.0.0.0',
-        hmr: {
-            host: 'lartail-porto.test'
-        }
-    },
+    server,
     plugins: [
         laravel({
             input: 'resources/js/app.jsx',
